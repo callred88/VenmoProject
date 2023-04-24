@@ -33,8 +33,11 @@ def bank_transaction ():
     print("This is your current information on your account........")
     print("Your available balance is ",(user_one.get("account_balance")))
     print("The funds available in the connect accounts are:")
-    print("Name of the Bank:") 
-    print(tuple{"xonnected.bank"}{"bank_name"})
+    for bank,balance in user_one:
+     bank = user_one["connected_banks"][0][1]["bank_name"]
+     balance = user_one["connected_banks"][0][1]["available_balance"]
+     print(bank,":","$",balance,"available" )
+    
        
 
     
