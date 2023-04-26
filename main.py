@@ -50,7 +50,7 @@ def bank_transaction ():
         money_after_transfer = user_one["account_balance"] - money
         user_two["account_balance"]= user_two["account_balance"] + money
         transfer = input(f"Would you like to transfer money to {name}?")
-        
+        print(user_one["full_name"],"has an account balance of", money_after_transfer, "Have a great day!")
         
        
 
