@@ -22,14 +22,17 @@ user_two = {
 
 
 def bank_transaction ():
-    username = input("What is your username?")
-    password_right = input("What is your password?")
-    if username != (user_one.get("user_name")) and password_right != (user_one.get("password")) :
-        print("Please check the username and password.")
+    user_validated = False
+    while user_validated == False:
         username = input("What is your username?")
         password_right = input("What is your password?")
-    if username == (user_one.get("user_name")) and password_right == (user_one.get("password")):
-        print("You are now logged into your account.")
+
+        if username != (user_one.get("user_name")) or password_right != (user_one.get("password")) :
+            print("Please check the username and password.")
+
+        else:
+            user_validated = True
+    print(f"{user_one['full_name']} is logged in.")
     print("This is your current information on your account........")
     print("Your available balance is ",(user_one.get("account_balance")))
     print("The funds available in the connect accounts are:")
